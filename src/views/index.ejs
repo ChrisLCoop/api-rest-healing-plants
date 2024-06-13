@@ -1,0 +1,17 @@
+<%- include('include/header') %>
+            <h1>Api-Rest Healing Plants</h1>
+            <p>Es una pequeña Api donde se podra solicitar, Añadir, actualizar y eliminar la informacion sobre algunas plantas medicinales,</p>
+            <p>A continuacion se describira los ENDPOINT para consumir la api</p>
+            <ul>
+                <li>GET : "url + /api" solicitar todo los ITEM</li>
+                <li>POST : "url + /api" añadir un item</li>
+                <li>PATCH : "url + /api/:id" actualizar todo o un campo</li>
+                <li>DELETE : "url + /api/:id" eliminar un ITEM</li>
+            </ul>
+            <div class="content-info">
+                <h2>Ejemplo de un modelo en JSON</h2>
+                <img src="/img/json-plants.png" alt="">
+            </div>
+            <p>tambien podra añadir la informacion ysu imagen por este <a href="/add-plants">enlace</a></p>
+            
+<%- include('include/footer') %>

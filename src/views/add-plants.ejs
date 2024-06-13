@@ -1,0 +1,33 @@
+<%- include('include/header') %>
+            <h1>Api-Rest Healing Plants</h1>
+            <p class="subtitulo">Ingrese aqui el nueva PLANTA</p>
+            <form class="form" action="/add-new-item" method="POST">
+                <label for="">Nombre Comun</label>
+                <input class="separate" type="text" name="nombreCom" id="" required maxlength="100">
+                <label for="">Nombre Cientifico</label>
+                <input class="separate" type="text" name="nombreCie" required maxlength="100">
+                <label for="">Descripcion</label>
+                <textarea class="separate" name="description" id="" required maxlength="500"></textarea>
+                <label for="">Partes Usadas</label>
+                <input class="separate" type="text" name="partUsada" required maxlength="254">
+                <label for="">Uso o Aplicacion</label>
+                <textarea class="separate" name="usoApli" id="" required maxlength="500"></textarea>
+                <label for="">Formas de Uso</label>
+                <textarea class="separate" name="formUso" id="" required maxlength="500"></textarea>
+                <button type="submit">Subir</button>
+            </form>
+            <p>Si desea actualizar la imagen del item, seleccione y cargue la imagen.</p>
+            <form action="/upload-img" method="post" enctype="multipart/form-data">
+                <select name="id_item" selected value id="">
+                    <% data.forEach(function(row){ %>
+                        <option value="<%= row.id_plant %>"><%= row.common_name %></option>
+                    <% }); %>
+                </select><br><br>
+                <input type="file" name="image" required>
+                <button type="submit">Subir Imagen</button>
+            </form>
+            <br>
+            <a href="/">Regresar al menu Principal</a>
+            <br>
+            <a href="/galery">Mostrar galeria</a>
+<%- include('include/footer') %>

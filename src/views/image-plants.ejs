@@ -1,0 +1,15 @@
+<%- include('include/header') %>
+            <h1>Api-Rest Healing Plants</h1>
+            <p>Galeria</p>
+            <div class="cont-img-item">
+                <% data.forEach(function(row){ %>
+                    <div class="grid-item">
+                        <p><%= row.common_name%></p>
+                        <img class="img-plants" src="<%= row.url_image%>" alt="">
+                    </div>
+                <% }); %>
+            </div>
+            <br>
+            <a href="/">Regresar al menu Principal</a>
+            
+<%- include('include/footer') %>
